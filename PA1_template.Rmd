@@ -58,6 +58,15 @@ na.omit() %>%
   set_names(c("interval", "mean")) ->
 avgPatternData
 
+# means per interval
+head(avgPatternData)
+
+# total mean
+mean(data$steps, na.rm = TRUE)
+
+# total media
+median(data$steps, na.rm = TRUE)
+
 # plot means
 avgPatternData %>% 
 ggplot(., aes(interval, mean)) + 
