@@ -137,25 +137,7 @@ na.omit() %&gt;%
   set_names(c(&quot;interval&quot;, &quot;mean&quot;)) -&gt;
 avgPatternData
 
-# means per interval
-head(avgPatternData)</code></pre>
-<pre><code>## Source: local data frame [6 x 2]
-## 
-##   interval      mean
-##      (int)     (dbl)
-## 1        0 1.7169811
-## 2        5 0.3396226
-## 3       10 0.1320755
-## 4       15 0.1509434
-## 5       20 0.0754717
-## 6       25 2.0943396</code></pre>
-<pre class="r"><code># total mean
-mean(data$steps, na.rm = TRUE)</code></pre>
-<pre><code>## [1] 37.3826</code></pre>
-<pre class="r"><code># total media
-median(data$steps, na.rm = TRUE)</code></pre>
-<pre><code>## [1] 0</code></pre>
-<pre class="r"><code># plot means
+# plot means
 avgPatternData %&gt;% 
 ggplot(., aes(interval, mean)) + 
   geom_line(color = &quot;steelblue&quot;, size = 0.8) + 
