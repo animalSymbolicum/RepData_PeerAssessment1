@@ -50,7 +50,7 @@ head(data)
 ## 6    NA 2012-10-01       25
 ```
 
-
+![](PA1_template_files/figure-html/unnamed-chunk-1-1.png)
 
 ## What is mean total number of steps taken per day?
 
@@ -66,8 +66,6 @@ xlab("Date")
 ```
 ## Warning: Removed 2304 rows containing missing values (position_stack).
 ```
-
-![](PA1_template_files/figure-html/unnamed-chunk-1-1.png)
 
 ```r
 # summarise means
