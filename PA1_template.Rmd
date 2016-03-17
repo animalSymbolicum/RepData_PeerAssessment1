@@ -1,8 +1,8 @@
 ---
 title: "Reproducible Research: Peer Assessment 1"
 author: "Majid"
-date: "March 13, 2016"
-output: html_document
+date: "March 17, 2016"
+output: "html_document"
 ---
 
 
@@ -16,10 +16,7 @@ suppressPackageStartupMessages({
 })
 
 # import data
-temp <- tempfile()
-download.file("https://d396qusza40orc.cloudfront.net/repdata%2Fdata%2Factivity.zip",temp)
-data <- read.csv(unz(temp, "activity.csv"),stringsAsFactors = F)
-unlink(temp)
+data <- read.csv("activity.csv",stringsAsFactors = F)
 
 # save date as POSIXct
 data$date <- as.POSIXct(data$date, format = "%Y-%m-%d")

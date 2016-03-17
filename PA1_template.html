@@ -10,7 +10,7 @@
 
 <meta name="author" content="Majid" />
 
-<meta name="date" content="2016-03-13" />
+<meta name="date" content="2016-03-17" />
 
 <title>Reproducible Research: Peer Assessment 1</title>
 
@@ -64,7 +64,7 @@ img {
 <div id="header">
 <h1 class="title">Reproducible Research: Peer Assessment 1</h1>
 <h4 class="author"><em>Majid</em></h4>
-<h4 class="date"><em>March 13, 2016</em></h4>
+<h4 class="date"><em>March 17, 2016</em></h4>
 </div>
 
 
@@ -78,10 +78,7 @@ suppressPackageStartupMessages({
 })
 
 # import data
-temp &lt;- tempfile()
-download.file(&quot;https://d396qusza40orc.cloudfront.net/repdata%2Fdata%2Factivity.zip&quot;,temp)
-data &lt;- read.csv(unz(temp, &quot;activity.csv&quot;),stringsAsFactors = F)
-unlink(temp)
+data &lt;- read.csv(&quot;activity.csv&quot;,stringsAsFactors = F)
 
 # save date as POSIXct
 data$date &lt;- as.POSIXct(data$date, format = &quot;%Y-%m-%d&quot;)
